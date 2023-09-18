@@ -1,0 +1,22 @@
+- To use different font we will import CSS from either FontAwesome or https://cdnjs.com/ .
+- Go to https://cdnjs.com/ >> font-awesome >> Copy CSS Path >> Paste in Head in HTML file, above stylesheet.
+
+- Use google font - 
+    - Go to google font page >> select the style of your choice >> go to @import >> copy style >> paste in CSS file (without style tag)
+
+- In css if we want to apply property globaly we can use this
+*{
+    font-family:'Roboto';
+}
+
+CSS
+  font-family: 'Roboto', sans-serif;
+  /* All elements will be in single line left to right */
+  display: flex;
+  /* To set the direction of the elements */
+  flex-direction: column;
+  /* Align items to center */
+  align-items: center;
+  /* Move items to center give height to page, 100vh 100% of view port*/
+  height: 100vh;
+  overflow: hidden;
