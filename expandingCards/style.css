@@ -35,13 +35,25 @@ body {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  opacity: 0.2;
+  opacity: 0;
 }
 
-.panel:active {
+.panel.active {
   flex: 5;
 }
 
-.panel:active h3 {
+.panel.active h3 {
   opacity: 1;
+  transition: opacity 0.2s ease-in 0.5s;
+}
+
+/* If the Screen width is less than 480px*/
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+  .panel:nth-child(4),
+  .panel:nth-child(5) {
+    display: none;
+  }
 }
