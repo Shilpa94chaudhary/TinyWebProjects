@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Custom Property */
+:root {
+  --line-border-fill: rgba(127, 255, 212, 0.777);
+  --line-border-empty: rgba(73, 74, 73, 0.777);
+  --active-circle-background-fill: grey;
+  --active-circle-border-fill: rgba(99, 200, 166, 0.854);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(12, 12, 12, 0.95);
+  font-family: 'Muli', sans-serif;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  max-width: 80%;
+  width: 350px;
+}
+
+.progress-container::before {
+  content: '';
+  background-color: var(--line-border-empty);
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.progress {
+  background-color: var(--line-border-fill);
+  position: absolute;
+  height: 4px;
+  width: 0;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+  transition: 0.6s ease;
+}
+
+.circle {
+  background-color: aliceblue;
+  font-size: 18px;
+  color: var(--line-border-empty);
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--line-border-empty);
+  transition: 0.8s ease;
+}
+
+.circle.active {
+  border-color: var(--active-circle-border-fill);
+  color: var(--active-circle-border-fill);
+  background-color: var(--active-circle-background-fill);
+}
+
+.btn {
+  background-color: var(--active-circle-background-fill);
+  color: black;
+  height: 25px;
+  width: 80px;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+  font-family: inherit;
+  margin: 10px;
+  font-size: 14px;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn:disabled {
+  background-color: #b7b7b7f2;
+  color: #686767;
+  cursor: not-allowed;
+  transform: scale(1);
+}
