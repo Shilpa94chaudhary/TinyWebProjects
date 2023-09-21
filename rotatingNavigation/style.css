@@ -15,18 +15,23 @@ body {
   width: 100vw;
   min-height: 100vh;
   padding: 50px;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
 }
 
 .container.show-nav {
   transform: rotate(-20deg);
-  transform-origin: top left;
-  transition: transform 0.5s linear;
+}
+
+.container.show-nav .circle {
+  transform: rotate(-70deg);
 }
 
 .circle-container {
   position: fixed;
   top: -100px;
   left: -100px;
+  z-index: 100;
 }
 
 .circle {
@@ -60,8 +65,9 @@ body {
 }
 
 .content img {
-  width: 100%;
+  max-width: 100%;
 }
+
 .content {
   max-width: 1000px;
   margin: 50px auto;
@@ -81,6 +87,11 @@ body {
   line-height: 1.5;
 }
 
+.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.3sec;
+}
+
 nav {
   position: fixed;
   bottom: 40px;
@@ -98,6 +109,8 @@ nav ul li {
   color: #dbd9d9cf;
   margin: 40px 0;
   font-size: 14px;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in;
 }
 nav ul li i {
   margin: 10px;
