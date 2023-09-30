@@ -15,6 +15,7 @@ body {
 .container {
   display: flex;
   width: 90vw;
+  max-width: 1000px;
 }
 .panel {
   background-size: auto 100%;

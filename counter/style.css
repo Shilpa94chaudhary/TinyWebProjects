@@ -2,12 +2,52 @@ body {
   background-color: black;
 }
 .counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%vh;
+  overflow: hidden;
+  padding: 50px;
 }
 .set-counter {
   height: 100px;
-  margin: 20px;
 }
-.counter {
+.set-counter p {
+  font-size: 24px;
+  color: aliceblue;
+}
+.set-counter input {
+  align-items: center;
+  height: 34px;
+  font-size: 24px;
+  border-radius: 2px;
+  width: 100px;
+  outline: none;
+  border: none;
+}
+.set-counter input:focus {
+  outline: none;
+  border: none;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 2px;
+}
+
+.set-counter i {
+  margin-left: 20px;
+  font-size: 24px;
+}
+.counter .digit {
+  color: aliceblue;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 150px;
+  margin: 50px;
   height: 200px;
   width: 200px;
   border-radius: 5px;
