@@ -17,6 +17,7 @@ body {
 .search {
   position: relative;
   height: 50px;
+  transition: width 0.3s ease;
 }
 
 .search .input {
